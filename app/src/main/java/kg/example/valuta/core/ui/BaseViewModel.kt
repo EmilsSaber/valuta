@@ -1,4 +1,4 @@
-package kg.example.youtubeapi.core.ui
+package kg.example.valuta.core.ui
 
 import androidx.lifecycle.ViewModel
 

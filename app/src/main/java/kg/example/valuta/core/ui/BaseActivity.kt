@@ -1,4 +1,4 @@
-package kg.example.less2.Base
+package kg.example.valuta.core.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,12 +18,8 @@ abstract class BaseActivity<VB: ViewBinding, VM: ViewModel> : AppCompatActivity(
         initViewModel()
         initListener()
 }
-
     open fun initView(){}
     open fun initViewModel(){}
     open fun initListener(){}
-
-
-
 
 }

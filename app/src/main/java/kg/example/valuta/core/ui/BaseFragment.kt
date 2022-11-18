@@ -1,4 +1,4 @@
-package kg.example.less2.Base
+package kg.example.valuta.core.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater

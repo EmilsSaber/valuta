@@ -1,12 +1,13 @@
-package kg.example.valuta
+package kg.example.valuta.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kg.example.valuta.R
 
-class MainActivity : AppCompatActivity() {
+class CurrencyConverterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_currency_converter)
 
     }
 }
