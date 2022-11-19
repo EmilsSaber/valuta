@@ -1,11 +1,11 @@
-package kg.example.valuta.utils
-
+package kg.example.valuta.ui
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import kg.example.valuta.data.remote.model.Valute
 import kg.example.valuta.databinding.ItemSelectionBinding
 
-class SelectionAdapter(private var list: List<String>):
+class SelectionAdapter(private var list: List<Valute>):
     RecyclerView.Adapter<SelectionAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -22,8 +22,8 @@ class SelectionAdapter(private var list: List<String>):
 
 
     inner class ViewHolder(private var binding: ItemSelectionBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(s: String) {
-            TODO("Not yet implemented")
+        fun bind(valute: Valute) {
+            binding.nameOfCurrency1.text = valute.KGS.Name
         }
     }
 }

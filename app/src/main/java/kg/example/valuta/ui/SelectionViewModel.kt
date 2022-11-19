@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import kg.example.valuta.core.ui.BaseViewModel
 import kg.example.valuta.data.remote.model.CurrensyModel
 import kg.example.valuta.result.Resource
-import kg.example.valuta.utils.App
+import kg.example.valuta.App
 
 class SelectionViewModel: BaseViewModel() {
 

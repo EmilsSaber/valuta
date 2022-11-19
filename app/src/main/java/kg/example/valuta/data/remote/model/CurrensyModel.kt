@@ -8,6 +8,10 @@ data class CurrensyModel(
     val Valute: Valute
 )
 
+data class Item(
+    val items: Valute,
+)
+
 data class Valute(
     val AMD: AMD,
     val AUD: AUD,

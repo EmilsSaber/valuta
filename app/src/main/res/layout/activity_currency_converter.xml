@@ -6,13 +6,103 @@
     android:layout_height="match_parent"
     tools:context=".ui.CurrencyConverterActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/gray"
+        android:id="@+id/converter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Currency_Converter"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <EditText
+        android:textColorHint="@color/black"
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:hint="@string/EnterNum"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@id/Val1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/converter"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <EditText
+        android:textColorHint="@color/black"
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/EnterNum"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/editText"
+        app:layout_constraintBottom_toTopOf="@id/Val2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/converter"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+    
+    
+    <TextView
+        android:textSize="32sp"
+        android:text="@string/rub"
+        android:id="@+id/Val1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Val2"
+        app:layout_constraintTop_toBottomOf="@id/editText"/>
+
+    <TextView
+        android:text="@string/usd"
+        android:textSize="32sp"
+        android:id="@+id/Val2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/Val1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText2"/>
+
+
+    <TextView
+        android:id="@+id/change1"
+        android:textSize="18sp"
+        android:textColor="@color/blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ChangeVal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/change2"
+        app:layout_constraintTop_toBottomOf="@id/Val1"/>
+
+    <TextView
+        android:textSize="18sp"
+        android:id="@+id/change2"
+        android:textColor="@color/blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ChangeVal"
+        app:layout_constraintStart_toEndOf="@id/change1"
+        app:layout_constraintTop_toBottomOf="@id/Val2"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

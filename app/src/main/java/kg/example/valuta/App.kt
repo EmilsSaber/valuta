@@ -1,4 +1,4 @@
-package kg.example.valuta.utils
+package kg.example.valuta
 
 import android.app.Application
 import kg.example.valuta.repository.Repository
