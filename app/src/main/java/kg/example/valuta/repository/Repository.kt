@@ -22,17 +22,17 @@ class Repository {
 
     private fun getCurrensy(): MutableLiveData<Resource<Currencies>> {
         val data = MutableLiveData<Resource<Currencies>>()
-//        data.value = Resource.loading()
+        data.value = Resource.loading()
         apiService.getCurrency().enqueue(
             object : Callback<Currencies> {
                 override fun onResponse(call: Call<Currencies>, response: Response<Currencies>) {
                     if (response.isSuccessful){
-//                        data.value = Resource.success(response.body())
+                        data.value = Resource.success(response.body())
                         Log.e("ololo", "onResponse:" + response.body() )
                     }}
                 override fun onFailure(call: Call<Currencies>, t: Throwable) {
                     Log.d("ololo", "onSuccess: else")
-//                    data.value = Resource.error( null,t.message)
+                    data.value = Resource.error( null,t.message)
                 }
             }
         )
