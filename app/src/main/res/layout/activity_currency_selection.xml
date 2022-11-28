@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.CurrencySelectionActivity">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/selection"
         android:layout_width="match_parent"
@@ -28,6 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/onBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
@@ -50,6 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/selection"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_selection" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

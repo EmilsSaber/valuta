@@ -11,7 +11,7 @@ import androidx.viewbinding.ViewBinding
 
 abstract class BaseFragment<VB : ViewBinding, VM: ViewModel>: Fragment() {
     protected lateinit var binding: VB
-    protected lateinit var viewModel: VM
+//    protected lateinit var viewModel: VM
      abstract fun inflateVB(layoutInflater: LayoutInflater): VB
 
 
@@ -21,13 +21,13 @@ abstract class BaseFragment<VB : ViewBinding, VM: ViewModel>: Fragment() {
     ): View? {
         binding = inflateVB(layoutInflater)
         return binding.root
-        initView()
-        initViewModel()
-        initListener()
+//        initView()
+//        initViewModel()
+//        initListener()
     }
 
-    abstract fun initListener()
-    abstract fun initViewModel()
-
-    abstract fun initView()
+//    abstract fun initListener()
+//    abstract fun initViewModel()
+//
+//    abstract fun initView()
 }

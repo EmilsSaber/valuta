@@ -1,6 +1,5 @@
 package kg.example.valuta.result
 
-
 data class Resource< T>(val status: Status, val data: T?, val message: String?, val code: Int?){
     companion object{
         fun <T> success(data:T?,code:Int?= null): Resource<T> {
@@ -12,6 +11,5 @@ data class Resource< T>(val status: Status, val data: T?, val message: String?, 
         fun <T> loading(): Resource<T> {
             return Resource(Status.LOADING, null,null,null)
         }
-
     }
 }

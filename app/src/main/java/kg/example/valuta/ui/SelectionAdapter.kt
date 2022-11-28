@@ -5,8 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kg.example.valuta.data.remote.model.Currency
 import kg.example.valuta.databinding.ItemSelectionBinding
 
-class SelectionAdapter :
-    RecyclerView.Adapter<SelectionAdapter.ViewHolder>() {
+class SelectionAdapter(val listener: Listener): RecyclerView.Adapter<SelectionAdapter.ViewHolder>() {
     private val currencyList = arrayListOf<Currency>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -20,7 +19,7 @@ class SelectionAdapter :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(currencyList[position])
+        holder.bind(currencyList[position], listener)
     }
 
     override fun getItemCount(): Int {
@@ -32,10 +31,22 @@ class SelectionAdapter :
         notifyItemInserted(currencyList.lastIndex)
     }
 
+    interface Listener{
+        fun onClick(currency: Currency?){
+        }
+        fun onClick2(currency: Currency?){
+
+        }
+    }
+
     inner class ViewHolder(private var binding: ItemSelectionBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(currency: Currency) {
+        fun bind(currency: Currency, listener: Listener) {
             binding.nameOfCurrency1.text = currency.name
             binding.nameOfCurrency2.text = currency.char
+
+            itemView.setOnClickListener{
+                listener.onClick(currency)
+            }
         }
     }}
