@@ -9,7 +9,7 @@ import kg.example.valuta.data.remote.model.Currencies
 class ConverterViewModel: BaseViewModel() {
 
     fun getPlaylists(): MutableLiveData<Resource<Currencies>> {
-        return App().repository.getCurrensys()
+        return App().repository.getCurrency()
     }
 
 }

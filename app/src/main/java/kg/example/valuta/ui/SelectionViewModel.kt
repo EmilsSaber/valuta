@@ -7,8 +7,7 @@ import kg.example.valuta.App
 import kg.example.valuta.data.remote.model.Currencies
 
 class SelectionViewModel: BaseViewModel() {
-
-    fun getCurrensys(): MutableLiveData<Resource<Currencies>> {
-        return App().repository.getCurrensys()
+    fun getCurrents(): MutableLiveData<Resource<Currencies>> {
+        return App().repository.getCurrency()
     }
 }

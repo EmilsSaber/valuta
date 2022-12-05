@@ -28,7 +28,6 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
     <EditText
         android:textColorHint="@color/black"
         android:id="@+id/editText"
@@ -82,7 +81,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editText2"/>
 
-
     <TextView
         android:id="@+id/change1"
         android:textSize="18sp"
@@ -104,5 +102,7 @@
         app:layout_constraintStart_toEndOf="@id/change1"
         app:layout_constraintTop_toBottomOf="@id/Val2"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
