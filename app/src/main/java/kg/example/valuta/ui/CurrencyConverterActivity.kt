@@ -1,5 +1,6 @@
 package kg.example.valuta.ui
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
