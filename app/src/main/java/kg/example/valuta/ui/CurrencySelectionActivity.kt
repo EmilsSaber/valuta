@@ -85,7 +85,6 @@ class CurrencySelectionActivity: BaseActivity<ActivityCurrencySelectionBinding, 
         intent.putExtra("result_value_2",currency?.value.toString())
         setResult(RESULT_OK,intent)
         finish()
-
     }
 
 
