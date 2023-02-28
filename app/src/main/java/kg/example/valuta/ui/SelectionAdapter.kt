@@ -19,7 +19,7 @@ class SelectionAdapter(val listener: Listener): RecyclerView.Adapter<SelectionAd
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(currencyList[position], listener)
+        holder.bind(currencyList[position])
     }
 
     override fun getItemCount(): Int {
@@ -41,7 +41,7 @@ class SelectionAdapter(val listener: Listener): RecyclerView.Adapter<SelectionAd
 
     inner class ViewHolder(private var binding: ItemSelectionBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(currency: Currency, listener: Listener) {
+        fun bind(currency: Currency, ) {
             binding.nameOfCurrency1.text = currency.name
             binding.nameOfCurrency2.text = currency.char
 
